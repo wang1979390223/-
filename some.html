@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 要求1：使用for循环封装还原some函数
+      // 要求2：该函数由数组调用，接收一个方法
+
+      const ret = [1, 2, 3, 4]
+
+      // const flag = ret.some(item => {
+      //   return item === 1
+      // })
+      // console.log(flag) //true
+
+      Array.prototype.mySome = function (fn) {
+        let flag = false
+
+        for (let i = 0; i < this.length; i++) {
+          if (fn(this[i], i, this)) {
+            return (flag = true)
+          }
+        }
+
+        return flag
+      }
+
+      console.log([].mySome(item => item === 4))
+
+      console.log(
+        ret.mySome(item => {
+          console.log(1)
+          return item === 4
+        })
+      )
+    </script>
+  </body>
+</html>

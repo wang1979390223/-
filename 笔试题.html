@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 题目1(选做)：const arr=['name','age','hhh','hhh','age','hhh','hhh','hhh']各出现多少次
+      // 要求输出一个对象如下：{age: 2,hhh: 5,name: 1}
+      // const arr = ['name', 'age', 'hhh', 'hhh', 'age', 'hhh', 'hhh', 'hhh']
+
+      // // 题目2(必做)：现在两个数组，判断在a中的元素，不在b中 const a = [1,2,3,5] const b=[1,3,5,6] 将在a不在b中的筛选出来
+      // // 要求：输出一个数组：[2]
+      // const a = [1, 2, 3, 5]
+      // const b = [1, 3, 5, 6]
+const arr = [1, 2, 3, 5]
+const arr2 = [1, 3, 5, 6]
+    let result = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr2.indexOf(arr[i]) == -1) {
+            result.push(arr[i])
+            //console.log('arr[i]', arr[i]);
+        }
+    }
+    console.log(result);
+      // // 题目3(必做):数组去重(可以用多种方法,至少写一种)
+     // const arr2 = [1, 2, 3, 2, 9]
+      // // 要求：输出一个数组：[1,2,3,9]
+//3
+//     const arr2 = [1, 2, 3, 2, 9]
+//       //创建一个新数组
+//   const newArr = new Set(arr2)
+//   //得到了一个去重之后的对象利用[...]方法把得到的对象转换为数组
+//   const newArr1=[...newArr]
+//  console.log(newArr1);  
+
+
+    </script>
+  </body>
+</html>
